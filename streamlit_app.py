@@ -177,12 +177,8 @@ with col2:
     st.markdown(f'<div class="lvl-badge" style="background-color:#0055FF; color:#ffffff; box-shadow: 0 0 5px #0055FF;">LV.{st.session_state.monster_level}</div>', unsafe_allow_html=True)
     st.markdown(f'<h3 style="color:#0055FF; margin:0 0 10px 0;">👾 {monster.name}</h3>', unsafe_allow_html=True)
     
-    # 몬스터 픽셀 이모지 네온 박스 렌더링
-    st.markdown("""
-    <div style="font-size: 110px; height: 160px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 0 12px #0055FF); margin-bottom: 20px; user-select: none;">
-        🍄
-    </div>
-    """, unsafe_allow_html=True)
+    # 몬스터 이미지 렌더링
+    st.image("mushroom.png", use_container_width=True)
     
     # 네온 체력바 (HP Gauge)
     max_monster_hp = 50 + (st.session_state.monster_level - 1) * 15
