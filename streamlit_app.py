@@ -47,11 +47,11 @@ body {
 }
 .cabinet-red {
     background-color: #161622;
-    border: 4px solid #FF0055;
+    border: 4px solid #0055FF; /* 파랑버섯 컨셉에 맞춰 블루 네온으로 변경 */
     border-radius: 12px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 0 15px #FF0055;
+    box-shadow: 0 0 15px #0055FF; /* 파랑버섯 컨셉에 맞춰 블루 네온으로 변경 */
     margin-bottom: 20px;
 }
 .stats-font {
@@ -104,7 +104,7 @@ body {
 """, unsafe_allow_html=True)
 
 # 타이틀 표시
-st.markdown('<div class="arcade-title">몬스타 몹 잡기</div>', unsafe_allow_html=True)
+st.markdown('<div class="arcade-title">몬스터몹잡기</div>', unsafe_allow_html=True)
 st.markdown('<div class="arcade-subtitle">동전 넣기 _</div>', unsafe_allow_html=True)
 
 # 세션 상태 초기화 (레벨 및 경험치 시스템 도입)
@@ -174,12 +174,12 @@ with col_vs:
 
 with col2:
     st.markdown('<div class="cabinet-red">', unsafe_allow_html=True)
-    st.markdown(f'<div class="lvl-badge" style="background-color:#FF0055; color:#ffffff; box-shadow: 0 0 5px #FF0055;">LV.{st.session_state.monster_level}</div>', unsafe_allow_html=True)
-    st.markdown(f'<h3 style="color:#FF0055; margin:0 0 10px 0;">👾 {monster.name}</h3>', unsafe_allow_html=True)
+    st.markdown(f'<div class="lvl-badge" style="background-color:#0055FF; color:#ffffff; box-shadow: 0 0 5px #0055FF;">LV.{st.session_state.monster_level}</div>', unsafe_allow_html=True)
+    st.markdown(f'<h3 style="color:#0055FF; margin:0 0 10px 0;">👾 {monster.name}</h3>', unsafe_allow_html=True)
     
     # 몬스터 픽셀 이모지 네온 박스 렌더링
     st.markdown("""
-    <div style="font-size: 110px; height: 160px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 0 12px #FF0055); margin-bottom: 20px; user-select: none;">
+    <div style="font-size: 110px; height: 160px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 0 12px #0055FF); margin-bottom: 20px; user-select: none;">
         🍄
     </div>
     """, unsafe_allow_html=True)
@@ -188,8 +188,8 @@ with col2:
     max_monster_hp = 50 + (st.session_state.monster_level - 1) * 15
     m_hp_pct = max(0, min(100, int((monster.hp / max_monster_hp) * 100)))
     st.markdown(f"""
-    <div style="background-color:#222; border-radius:5px; height:16px; width:100%; margin-bottom:5px; border: 1px solid #FF0055;">
-        <div style="background-color:#FF0055; height:14px; width:{m_hp_pct}%; border-radius:4px; box-shadow: 0 0 10px #FF0055; transition: width 0.3s ease;"></div>
+    <div style="background-color:#222; border-radius:5px; height:16px; width:100%; margin-bottom:5px; border: 1px solid #0055FF;">
+        <div style="background-color:#0055FF; height:14px; width:{m_hp_pct}%; border-radius:4px; box-shadow: 0 0 10px #0055FF; transition: width 0.3s ease;"></div>
     </div>
     """, unsafe_allow_html=True)
     
